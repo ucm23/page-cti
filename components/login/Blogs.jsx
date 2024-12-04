@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./Navbar";
+import NavBar from "./NavBar";
 function Blogs() {
     return (
-        <Navbar>
+        <NavBar>
             <h1>Blogs</h1>
-        </Navbar>
+        </NavBar>
     )
 }
 
