@@ -92,7 +92,7 @@ export default function ScheduleCalls(props) {
                                 name: '',
                                 apellidos: '',
                                 phone: '',
-                                email: ''
+                                email: '',
                             }}
                             onSubmit={(values) => sendEmail(values)}
                         >
