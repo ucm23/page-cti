@@ -38,6 +38,7 @@ let headersList = {
 let URL = "https://backend-landing-pages.vercel.app/send-email";
 
 export default function ScheduleCalls(props) {
+
     const sendEmail = async (values) => {
         console.log("🚀 ~ sendEmail ~ values:", values)
         try {
@@ -49,11 +50,12 @@ export default function ScheduleCalls(props) {
             });
             let data = await response.text();
             console.log(data);
-    
+
         } catch (error) {
             console.log("🚀 ~ sendEmail ~ error:", error)
         }
     }
+
     return (
         <Modal
             open={props?.show}
@@ -92,9 +94,7 @@ export default function ScheduleCalls(props) {
                                 phone: '',
                                 email: ''
                             }}
-                            onSubmit={(values) => {
-                                sendEmail(values)
-                            }}
+                            onSubmit={(values) => sendEmail(values)}
                         >
                             {({ errors, touched }) => (
                                 <Form className="form-flex-row">
