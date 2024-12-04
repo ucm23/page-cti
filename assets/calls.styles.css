@@ -59,6 +59,7 @@
   height: 38px;
   outline: none;
   border-width: 0.5px;
+  font-size: 13px;
 }
 
 .form-flex-row {
@@ -90,7 +91,7 @@
   font-weight: 700;
 }
 .small {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--gray);
   font-weight: 300;
 }

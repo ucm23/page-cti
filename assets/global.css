@@ -379,6 +379,7 @@ img.img-ideas {
     flex-wrap: wrap;
     align-content: center;
     justify-content: flex-start;
+    z-index: 2;
 }
 
 .submenu-sub-title {
@@ -417,7 +418,7 @@ img.img-ideas {
 
 .hero_title {
     font-size: 5rem;
-    z-index: 10;
+    /*z-index: 1;*/
     position: relative;
 }
 
@@ -2550,14 +2551,11 @@ img.img-ideas {
     flex-direction: row;
 }
 
-.header,
-.footer {
+.header, .footer {
     flex: 0 0 auto;
-    background-color: #ccc;
+    /*background-color: #ccc;*/
     padding: 10px;
 }
-
-
 
 .table-scroll {
     flex: 1 1 auto;
@@ -2679,4 +2677,8 @@ td {
 .display-chat {
     display: none;
     transition: 1s;
+}
+
+.text-justify {
+    text-align: justify;
 }

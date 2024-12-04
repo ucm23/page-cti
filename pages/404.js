@@ -7,9 +7,9 @@ const NotFound = () => {
 
     const { push } = useRouter();
 
-    setTimeout(() => {
+    /*setTimeout(() => {
         push("/");
-    }, 4500);
+    }, 4500);*/
 
     return (
         <Layout>

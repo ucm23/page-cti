@@ -29,48 +29,31 @@ const SignupSchema = Yup.object().shape({
     phone: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Campo requerido'),
 });
 
-const sendEmail = async (values) => {
-    console.log("🚀 ~ sendEmail ~ values:", values)
-    try {
-        /*let headersList = {
-            "Accept": "* /*"
-        }
-
-        let response = await fetch(
-            //"https://backend-landing-pages.vercel.app/send-email",
-            "http://localhost:3001/send-email",
-            {
-                method: "POST",
-                headers: headersList
-            });
-
-        let data = await response.text();
-        console.log(data);*/
-
-        let bodyR = JSON.stringify(values)
-
-        let headersList = {
-            "Accept": "*/*",
-            "Content-Type": "application/json"
-        }
-
-        let response = await fetch("http://localhost:3001/send-email", {
-            method: "POST",
-            headers: headersList,
-            body: bodyR
-            //data: bodyR
-        });
-
-        let data = await response.text();
-        console.log(data);
-
-    } catch (error) {
-        console.log("🚀 ~ sendEmail ~ error:", error)
-    }
+let headersList = {
+    "Accept": "*/*",
+    "Content-Type": "application/json"
 }
 
+//let URL = "http://localhost:3001/send-email";
+let URL = "https://backend-landing-pages.vercel.app/send-email";
 
 export default function ScheduleCalls(props) {
+    const sendEmail = async (values) => {
+        console.log("🚀 ~ sendEmail ~ values:", values)
+        try {
+            let bodyR = JSON.stringify(values)
+            let response = await fetch(URL, {
+                method: "POST",
+                headers: headersList,
+                body: bodyR
+            });
+            let data = await response.text();
+            console.log(data);
+    
+        } catch (error) {
+            console.log("🚀 ~ sendEmail ~ error:", error)
+        }
+    }
     return (
         <Modal
             open={props?.show}
@@ -90,13 +73,13 @@ export default function ScheduleCalls(props) {
                         <p className='strong-0'>
                             Agendar una llamada y obtén una sesión con un especialista
                         </p>
-                        <p className='font-gray'>⏱️ 30 minutos <br />🎥 Recibirás un documento vía email, además nuestro asesor analizará tus objetivos y te ayudará a entender los requerimientos necesarios.</p>
-                        <p className='font-gray'>
+                        <p className='font-gray text-justify'>⏱️ 30 minutos <br />🎥 Recibirás un documento vía email, además nuestro asesor analizará tus objetivos y te ayudará a entender los requerimientos necesarios.</p>
+                        <p className='font-gray text-justify'>
                             Esta es tu oportunidad de tener una llamada o zoom-call,
                             sin compromiso, antes de contratar el servicio.
                             Contamos con los mejores especialistas que te ayudarán a aclarar tus dudas y entender mejor tus necesidades.
                         </p>
-                        <p className='font-gray'>Gracias de antemano.</p>
+                        <p className='font-gray text-justify'>Gracias de antemano.</p>
                     </div>
 
                     <div className='forms'>
@@ -110,11 +93,6 @@ export default function ScheduleCalls(props) {
                                 email: ''
                             }}
                             onSubmit={(values) => {
-                                //console.log("🚀 ~ ScheduleCalls ~ values:", values)
-                                //setTimeout(() => {
-                                //alert(JSON.stringify(values, null, 2));
-                                //showRegister()
-                                //}, 500);
                                 sendEmail(values)
                             }}
                         >
@@ -176,13 +154,10 @@ export default function ScheduleCalls(props) {
                                             Siguiente
                                         </ColorButton>
                                     </div>
-
-
                                 </Form>
                             )}
                         </Formik>
                     </div>
-
                 </div>
             </Box>
         </Modal>

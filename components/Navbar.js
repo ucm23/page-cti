@@ -10,23 +10,21 @@ import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, } from "react-ico
 const icons_ = [RiFolderUserLine, RiBuilding2Line, RiFolderChartLine]
 
 const solutions = [
-    {
+    /*{
         name: "Soporte y Mesa de Ayuda",
         description: "Asistencia sobre cuestiones relacionadas con el mantenimiento de hardware, redes y sistemas",
         href: "/help"
-    },
+    },*/
     {
         name: "Gestión de REPSE VICTUM RE®",
         description: "Portal de gestión de proveedores integrado con ERP",
         href: "/Repse"
     },
-
-
-    {
+   /* {
         name: "VICTUM METRIX®",
         description: "Impulsa el crecimiento individual y colectivo",
         href: "/metrix"
-    }
+    }*/
 ]
 
 const Navbar = ({ children }) => {

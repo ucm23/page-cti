@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
                     className={!viewChat ? "display-chat" : "display-chat.view"}
                 />
 
-                <div className={`chat-bot ${viewChat ? "display-chat" : "display-chat.view"}`}>
+                {/*<div className={`chat-bot ${viewChat ? "display-chat" : "display-chat.view"}`}>
                     <div style={{ position: "relative", height: 500, left: 0 }}>
                         <div className='main-container-chat'>
                             <div className='chat-header'>
@@ -119,8 +119,8 @@ const Layout = ({ children }) => {
                                 <h1>hshs</h1>
                             </div>
                             <div className='chat-input'>
-                                <input type="textarea" class="input-chat" placeholder="Type the message ..." />
-                                <button class="sc-chPdSV hiexti rsc-submit-button btn-chat">
+                                <input type="textarea" className="input-chat" placeholder="Type the message ..." />
+                                <button className="sc-chPdSV hiexti rsc-submit-button btn-chat">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 500 500">
                                         <g>
                                             <g>
@@ -135,7 +135,7 @@ const Layout = ({ children }) => {
                         </div>
                     </div>
 
-                    {/*<ChatBot
+                    <ChatBot
                         steps={[
                             {
                                 id: "1",
@@ -217,8 +217,8 @@ const Layout = ({ children }) => {
                             }
 
                         ]}
-                    />*/}
-                </div>
+                    />
+                </div>*/}
             </main>
             <Footer />
 
