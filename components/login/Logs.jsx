@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import NavBar from "./NavBar";
 import React, { useEffect, useState, useRef, useMemo, memo } from "react"
 import { indexLogs } from "../../api/logs";
 import { Spin } from 'antd';
@@ -102,7 +102,7 @@ function Logs() {
         );
     };
     return (
-        <Navbar>
+        <NavBar>
             {!loading ? <div className="center-loader"><Spin tip="Cargando..."></Spin></div> :
                 <div className="tabla">
                     <div className="cabecera">Historial</div>
@@ -150,7 +150,7 @@ function Logs() {
                     </div>
                 </div>
             }
-        </Navbar>
+        </NavBar>
     )
 }
 

@@ -1,7 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import { useAuth } from '../../lib/useAuth'
-import { useRouter } from 'next/router'
 
 const LoginForm = ({ setAuth }) => {
     const [User, setUser] = useState({
