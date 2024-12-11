@@ -8,8 +8,8 @@ const LoginForm = ({ setAuth }) => {
     })
 
     const handleVerify = () => {
-        if (User.email === "123" && User.password === "123") {
-        // if (User.email === "guillerminasamano@yahoo.com.mx" && User.password === "G1raf@23") {
+        //if (User.email === "123" && User.password === "123") {
+        if (User.email === "guillerminasamano@yahoo.com.mx" && User.password === "G1raf@23") {
             setAuth(true)
             localStorage.setItem('8FxVPKskluR7opVa', 'gdOf3Jv2UvsAv2Yf');
             //name - valor
