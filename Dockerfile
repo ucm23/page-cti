@@ -1,15 +1,23 @@
-FROM node:14.18.0-alpine
+# Utiliza una imagen de Node.js específica para tu aplicación
+FROM node:18-alpine
 
-RUN mkdir /cti
- 
+# Crea el directorio de trabajo
 WORKDIR /cti
 
-COPY ./package.json /cti
+# Copia primero solo el archivo de dependencias para aprovechar el caché de Docker
+COPY package.json package-lock.json /cti/
 
+# Instala las dependencias, incluyendo las de desarrollo
 RUN npm install
 
+# Copia el resto de los archivos
 COPY . /cti
 
+# Construye la aplicación
 RUN npm run build
 
-CMD ["npm", "start"] 
+# Expone el puerto en el que se ejecutará la aplicación
+EXPOSE 3000
+
+# Comando para ejecutar la aplicación en modo de producción
+CMD ["npm", "start"]
