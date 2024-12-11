@@ -83,6 +83,7 @@ body::-webkit-scrollbar-thumb {
     margin-top: 10px;
     border-radius: 50px;
     padding: 6px 18px;
+    /*background-color: #a85405;*/
 }
 
 
@@ -417,7 +418,9 @@ img.img-ideas {
 }
 
 .hero_title {
-    font-size: 5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    padding-top: 8rem;
     /*z-index: 1;*/
     position: relative;
 }
@@ -703,12 +706,13 @@ img.img-ideas {
 }
 
 .slide-track {
-    -webkit-animation: scroll 25s linear infinite;
-    animation: scroll 25s linear infinite;
+    -webkit-animation: scroll 55s linear infinite;
+    animation: scroll 55s linear infinite;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 4220px;
+    padding: 0px 40px;
+    width: 3900px;
     height: 236px;
 }
 
@@ -1234,6 +1238,9 @@ img.img-ideas {
 .p-dif {
     padding: 10px;
     width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .p-dif p {
@@ -1244,6 +1251,9 @@ img.img-ideas {
     padding: 10px;
     margin: 15px;
     width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .p-diff p {

@@ -6,13 +6,17 @@ import { BiMailSend } from 'react-icons/bi'
 const Formulario = () => {
 
 	const form = useRef();
-
 	const [formularioenviado, setformularioenviado] = useState(false);
 
 	const sendEmail = () => {
-		emailjs.sendForm('service_f8cxw7w', 'template_84xbcfa', form.current, '3TkCFtArpfX95oASO')
-			.then(response => () => { })
-			.catch(er => () => { })
+		//emailjs.sendForm('service_f8cxw7w', 'template_84xbcfa', form.current, '3TkCFtArpfX95oASO')
+		emailjs.sendForm('service_nvpo3w9', 'template_hsji3ia', form.current, 'S5iZw_badfkGzLZhA')
+			.then(response => () => {
+				console.log(response)
+			})
+			.catch(er => () => {
+				console.log(er)
+			})
 	}
 
 	return (
@@ -52,7 +56,6 @@ const Formulario = () => {
 			}}
 		>
 			{({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
-
 				<form ref={form} className='formulario' onSubmit={handleSubmit}>
 					<h1 className="titulo_mapa">Escríbenos</h1>
 					<div>

@@ -35,6 +35,21 @@
             "src": "./cert/6.png",
             "className": "cert6 bg-white mx-10 my-5",
             "alt": "Certificación de Fortinet"
+        },
+        {
+            "src": "./cert/9.jpeg",
+            "className": "cert1 bg-white mx-10 my-5",
+            "alt": "Certificación de ISO 20001"
+        },
+        {
+            "src": "./cert/10.jpeg",
+            "className": "cert1 bg-white mx-10 my-5",
+            "alt": "Certificación de ISO 27001"
+        },
+        {
+            "src": "./cert/11.png",
+            "className": "cert1 bg-white mx-10 my-5",
+            "alt": "Certificación de ISO 9001"
         }
     ]
 }

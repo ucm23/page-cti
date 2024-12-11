@@ -165,7 +165,7 @@ const index = () => {
                 <Navbar >
                     <Fade direction="left">
                         <h1 className="hero_title">
-                            Grupo CTI<br />Tech-IN POS
+                            Grupo CTI Tech-IN POS
                         </h1>
                     </Fade>
                     <Fade direction="right">
@@ -175,7 +175,7 @@ const index = () => {
                     </Fade>
 
                     <Stack spacing={3} direction="row">
-                        <ColorButton disableElevation onClick={handleClick} size='large' variant="contained" className='mx-auto mb-4 btn-standar' endIcon={<MdExpandMore className='ml-2' />}>Leer Más</ColorButton>
+                        <ColorButton disableElevation onClick={handleClick} size='large' variant='outlined' className='mx-auto mb-2'>Leer más</ColorButton>
                     </Stack>
                 </Navbar>
                 {/* Encabezado */}

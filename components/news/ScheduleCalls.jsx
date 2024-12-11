@@ -1,11 +1,13 @@
 "use strict"
-import * as React from 'react';
+import { useState, useRef } from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import PropTypes from 'prop-types';
 import { Formik, Field, Form, } from 'formik';
 import * as Yup from 'yup';
+import emailjs from '@emailjs/browser'
 import { ColorButton } from '../../lib/theme';
+import { IoMdClose } from "react-icons/io";
 
 const style = {
     position: 'absolute',
@@ -22,10 +24,16 @@ const style = {
     p: 4,
 };
 
+const colors = {
+    '0': '#00adff',
+    '1': '#00adff',
+    '2': "#75b977",
+}
+
+
 const SignupSchema = Yup.object().shape({
     email: Yup.string().email('Correo electrónico inválido').required('Campo requerido'),
     name: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Escriba su nombre completo'),
-    apellidos: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Escriba su nombre completo'),
     phone: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Campo requerido'),
 });
 
@@ -39,6 +47,8 @@ let URL = "https://backend-landing-pages.vercel.app/send-email";
 
 export default function ScheduleCalls(props) {
 
+    const form = useRef();
+    const [formularioenviado, setformularioenviado] = useState(false);
     const sendEmail = async (values) => {
         console.log("🚀 ~ sendEmail ~ values:", values)
         try {
@@ -56,6 +66,17 @@ export default function ScheduleCalls(props) {
         }
     }
 
+    const sendEmail_ = () => {
+        //emailjs.sendForm('service_f8cxw7w', 'template_84xbcfa', form.current, '3TkCFtArpfX95oASO')
+        emailjs.sendForm('service_nvpo3w9', 'template_bvcgcaj', form.current, 'S5iZw_badfkGzLZhA')
+            .then(response => () => {
+                console.log(response)
+            })
+            .catch(er => () => {
+                console.log(er)
+            })
+    }
+
     return (
         <Modal
             open={props?.show}
@@ -64,6 +85,9 @@ export default function ScheduleCalls(props) {
             aria-describedby="modal-modal-description"
         >
             <Box sx={style} className='class-container'>
+                <div className="absolute top-1 right-1" onClick={props?.onHide}>
+                    <IoMdClose />
+                </div>
                 <div className='calls'>
                     <div className='calls-statics'>
                         <img
@@ -90,16 +114,32 @@ export default function ScheduleCalls(props) {
                             validateOnMount={true}
                             initialValues={{
                                 name: '',
-                                apellidos: '',
                                 phone: '',
                                 email: '',
+                                demo: `${props?.demo}`
                             }}
-                            onSubmit={(values) => sendEmail(values)}
+                            //onSubmit={(values) => sendEmail(values)}
+                            onSubmit={(values, { resetForm }) => {
+                                sendEmail_();
+                                resetForm()
+                                setformularioenviado(true);
+                                setTimeout(() => {
+                                    setformularioenviado(false)
+                                }, 4000)
+                            }}
                         >
-                            {({ errors, touched }) => (
-                                <Form className="form-flex-row">
+                            {({ values, errors, touched, handleSubmit, handleChange }) => (
+                                <form ref={form} onSubmit={handleSubmit} className="form-flex-row">
                                     <p className='strong'>Información personal</p>
                                     <p className='small'>Déje sus datos y en breve nos contactaremos contigo</p>
+                                    <input
+                                        type='hidden'
+                                        id='demo'
+                                        name='demo'
+                                        placeholder='demo'
+                                        autoComplete='off'
+                                        value={values.demo} />
+
                                     <div className="row-column">
                                         <Field
                                             id="name"
@@ -108,17 +148,7 @@ export default function ScheduleCalls(props) {
                                             type="text"
                                             className="input-email"
                                         />
-                                        <Field
-                                            id="apellidos"
-                                            name="apellidos"
-                                            placeholder="Apellido(s)*"
-                                            type="text"
-                                            className="input-email"
-                                        />
                                     </div>
-
-                                    {((errors.name && touched.name) || (errors.apellidos && touched.apellidos)) &&
-                                        <p className='error-form'> ⚠️ {errors.name || errors.apellidos}</p>}
 
                                     <Field
                                         id="phone"
@@ -150,11 +180,13 @@ export default function ScheduleCalls(props) {
                                             className='mx-auto mb-4 btn-standar'
                                             type='submit'
                                         //endIcon={<MdExpandMore className='ml-2' />}
+                                        style={{ backgroundColor: colors[props.index] }}
                                         >
                                             Siguiente
                                         </ColorButton>
                                     </div>
-                                </Form>
+                                    {formularioenviado && <p className='exito'>Formulario enviado con éxito</p>}
+                                </form>
                             )}
                         </Formik>
                     </div>

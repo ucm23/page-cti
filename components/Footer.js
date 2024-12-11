@@ -53,6 +53,16 @@ const Footer = () => {
                         <p>Propiedad intelectual</p>
                         <p>Centro de ciberseguridad</p>
                         <p>Análisis y diseño de sistemas</p>
+                        <Link href='https://intranet-cti.vercel.app/'>
+                            <a target='_blank' className='footer-cen'>
+                                <p>Red interna: Intranet</p>
+                            </a>
+                        </Link>
+                        <Link href=''>
+                            <a className='footer-cen'>
+                                <p>Asistente de Inteligencia Artificial: Victum IA</p>
+                            </a>
+                        </Link>
                     </div>
 
                     <div className='footer-block block4'>
@@ -72,8 +82,8 @@ const Footer = () => {
                             <a className='footer-cen'>
                                 <MdLocationOn className='block4-icon' />
                                 <div className='dir_center'>
-                                    <p>Av. Ejército Nacional 769, piso</p> 
-                                    <p>2. Col. Granada C.P. 11520, CDMX.</p> 
+                                    <p>Av. Ejército Nacional 769, piso 2</p> 
+                                    <p>Col. Granada C.P. 11520, CDMX.</p> 
                                 </div>
                             </a>
                         </Link>

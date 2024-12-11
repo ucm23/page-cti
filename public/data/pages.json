@@ -2,7 +2,7 @@
     "0": {
         "index": 0,
         "name": "Victum REPSE",
-        "name_": "VICTUM REPSE",
+        "name_": "VICTUM REPSE®",
         "header": {
             "title": "Emisión y Gestión Eficiente de CFDi y Requisiciones",
             "paragraph": "Agiliza tu ciclo de cobro y pago, asegurando un control total y visibilidad de tus cuentas por cobrar y pagar.",
@@ -164,58 +164,78 @@
         "name": "Soporte y Mesa de Ayuda",
         "name_": "SOPORTE Y MESA DE AYUDA",
         "header": {
-            "title": "Optimiza tu Flujo Financiero con Victum REPSE: Emisión y Gestión Eficiente de CFDi y Requisiciones",
-            "paragraph": "Agiliza tu ciclo de cobro y pago, asegurando un control total y visibilidad de tus cuentas por cobrar y pagar.",
-            "suffix": "track",
+            "title": "Soporte Integral y Mesa de Ayuda",
+            "paragraph": "Optimiza la asistencia técnica y la gestión de servicios de TI con un enfoque eficiente y proactivo.",
+            "suffix": "soporte",
             "imgs": [
-                "1.jpeg",
-                "2.jpeg",
-                "3.avif"
+                "soporte1.jpg",
+                "mesa1.jpeg",
+                "tecnologia.jpeg"
+            ],
+            "segments": [
+                {
+                    "title": "Soporte Técnico en Sitio",
+                    "paragraph": "Atención directa para la resolución de problemas técnicos en equipos y redes.",
+                    "img": "soporte1.jpg"
+                },
+                {
+                    "title": "Mesa de Ayuda Remota",
+                    "paragraph": "Gestión centralizada de solicitudes e incidentes técnicos con rápida respuesta.",
+                    "img": "mesa1.jpeg"
+                },
+                {
+                    "title": "Soluciones de Tecnología",
+                    "paragraph": "Migración, actualizaciones y asistencia en procesos tecnológicos clave.",
+                    "img": "tecnologia.jpeg"
+                }
             ]
         },
-        "atributtes": [
-            {
-                "title": "Seguridad de Datos",
-                "paragraph": "Protección robusta y confidencialidad de información"
-            },
-            {
-                "title": "Personalización",
-                "paragraph": "Ajuste según requerimientos y branding corporativo"
-            },
-            {
-                "title": "Acceso Móvil",
-                "paragraph": "Gestiona documentos desde cualquier lugar"
-            },
-            {
-                "title": "Escalabilidad",
-                "paragraph": "Adaptable a crecimiento empresarial y demandas"
-            },
-            {
-                "title": "Historial",
-                "paragraph": "Registro detallado de movimientos"
-            },
-            {
-                "title": "Visibilidad",
-                "paragraph": "Control total de documentos"
-            }
-        ],
+        "atributtes": {
+            "paragraph": "Soluciones completas para mantener y optimizar tu infraestructura tecnológica.",
+            "pros": [
+                {
+                    "title": "Mantenimiento Preventivo",
+                    "paragraph": "Evita problemas futuros con revisiones y actualizaciones periódicas."
+                },
+                {
+                    "title": "Atención a Incidentes",
+                    "paragraph": "Soporte técnico rápido y efectivo para problemas críticos."
+                },
+                {
+                    "title": "Gestión de Tickets",
+                    "paragraph": "Seguimiento completo desde la solicitud hasta la resolución."
+                },
+                {
+                    "title": "Soporte Personalizado",
+                    "paragraph": "Adaptado a las necesidades específicas de cada cliente."
+                },
+                {
+                    "title": "Cobertura Nacional",
+                    "paragraph": "Asistencia técnica remota y en sitio en todo el país."
+                },
+                {
+                    "title": "Innovación Continua",
+                    "paragraph": "Apoyo en procesos de migración y adopción de nuevas tecnologías."
+                }
+            ]
+        },
         "motivation": {
-            "title": "En Victum-REPSE tenemos los más altos estándares",
-            "paragraph": "No solo gestionamos cifras, creamos historias financieras de éxito. Fusionamos la innovación de una startup con la solidez de estándares financieros excepcionales. Nuestro respaldo proviene de los principales líderes en inversión, uniendo fuerzas para transformar la gestión documental en un viaje de eficiencia y prosperidad.",
-            "img": "4.jpeg"
+            "title": "En Grupo CTI, la tecnología está al servicio de tu éxito",
+            "paragraph": "Nuestro equipo trabaja para garantizar un entorno tecnológico eficiente, transformando desafíos en oportunidades.",
+            "img": "tecnologia2.jpeg"
         },
         "asks": [
             {
-                "title": "¿Qué necesito para registrar mi empresa?",
-                "paragraph": "Únicamente necesitas algunos datos y documentos básicos."
+                "title": "¿Qué incluye el Soporte en Sitio?",
+                "paragraph": "Desde mantenimiento preventivo hasta asistencia para usuarios, gestión de activos y más."
             },
             {
-                "title": "¿Puedo registrar a mis clientes?",
-                "paragraph": "¡Claro que sí!"
+                "title": "¿Qué servicios ofrece la Mesa de Ayuda?",
+                "paragraph": "Gestión de tickets, soporte remoto y solución de problemas de TI."
             },
             {
-                "title": "¿Qué ayuda recibo en Victum-REPSE?",
-                "paragraph": "Nuestro equipo esta 100% a tu disposicion para ayudarte con la implementacion de tus procesos."
+                "title": "¿Pueden ayudar con migraciones tecnológicas?",
+                "paragraph": "Sí, participamos en procesos de cambio como actualizaciones y adopción de nuevos sistemas."
             }
         ]
     }

@@ -14,17 +14,16 @@ const Contacto = () => {
     return (
         <Layout>
             <header className='contacto-header'>
-                {/* Barra de navegación */}
                 <Navbar >
                     <Fade direction="right">
                         <h1 className="hero_title">Contacto</h1>
                     </Fade>
                 </Navbar>
 
-                {/* Encabezado */}
+                {/* Encabezado 
                 <section className="hero_container container">
 
-                </section>
+                </section>*/}
             </header>
 
             <div className="overhid">

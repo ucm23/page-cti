@@ -7,6 +7,7 @@ import '../assets/atributtes.styles.css';
 import '../assets/section.styles.css';
 import '../assets/motivation.styles.css';
 import '../assets/calls.styles.css';
+import '../assets/styles.css';
 
 
 function MyApp({ Component, pageProps }) {

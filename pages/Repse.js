@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Fade } from 'react-awesome-reveal'
 import Layout from '../components/Layout'
 import Navbar from '../components/Navbar'
@@ -6,7 +7,6 @@ import Atributtes from "../components/news/Atributtes"
 import Section from "../components/news/Section"
 import Motivation from "../components/news/Motivation"
 import ScheduleCalls from '../components/news/ScheduleCalls'
-import { useState } from 'react'
 
 const Repse = () => {
     const index = "0";
@@ -37,8 +37,10 @@ const Repse = () => {
                 index={index}
             />
             <ScheduleCalls
+                index={index}
                 show={modalShow}
                 onHide={() => setModalShow(false)}
+                demo={'VICTUM REPSE'}
             />
         </Layout>
     )

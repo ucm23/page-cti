@@ -11,6 +11,18 @@ import { ColorButton } from '../../lib/theme';
 import { Stack } from '@mui/material';
 import { MdExpandMore } from 'react-icons/md';
 
+const colors = {
+    '0': '#00adff',
+    '1': '#00adff',
+    '2': "#75b977",
+}
+
+const hrefs = {
+    '0': '#00adff',
+    '1': '#00adff',
+    '2': "#75b977",
+}
+
 const Section = ({ index, showRegister }) => {
 
     const handleEnviarCorreo = async () => {
@@ -39,7 +51,8 @@ const Section = ({ index, showRegister }) => {
                         size='large'
                         variant="contained"
                         className='mx-auto mb-4 btn-standar'
-                    //endIcon={<MdExpandMore className='ml-2' />}
+                        //endIcon={<MdExpandMore className='ml-2' />}
+                        style={{ backgroundColor: colors[index] }}
                     >
                         Agenda tu llamada
                     </ColorButton>

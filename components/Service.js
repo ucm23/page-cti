@@ -35,7 +35,7 @@ const Service = ({titulo, descrip, icono}) => {
                 </CardContent>
                 <CardActions>
                     <Stack spacing={3} direction="row" className='mx-auto mb-4'>
-                        <ColorButton onClick={ handleClick } variant="contained" endIcon={<MdExpandMore className='ml-2' />}>Leer Más</ColorButton>
+                        <ColorButton onClick={ handleClick } variant="contained" className='mx-auto mb-4 btn-standar' endIcon={<MdExpandMore className='ml-2' />}>Leer Más</ColorButton>
                     </Stack>
                 </CardActions>
             </Card>

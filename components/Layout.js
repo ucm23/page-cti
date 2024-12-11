@@ -67,7 +67,7 @@ const Layout = ({ children }) => {
             </Head>
             <main>
                 {children}
-                <FloatButton
+                {/*<FloatButton
                     icon={<RobotOutlined />}
                     shape="circle"
                     //shape="circle" 
@@ -78,7 +78,7 @@ const Layout = ({ children }) => {
                     tooltip={<div>Salir</div>}
                     className={!viewChat ? "display-chat" : "display-chat.view"}
                 />
-
+*/}
                 {/*<div className={`chat-bot ${viewChat ? "display-chat" : "display-chat.view"}`}>
                     <div style={{ position: "relative", height: 500, left: 0 }}>
                         <div className='main-container-chat'>

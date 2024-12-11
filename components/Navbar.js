@@ -10,47 +10,37 @@ import { RiBuilding2Line, RiFolderUserLine, RiFolderChartLine, } from "react-ico
 const icons_ = [RiFolderUserLine, RiBuilding2Line, RiFolderChartLine]
 
 const solutions = [
-    /*{
+    {
         name: "Soporte y Mesa de Ayuda",
         description: "Asistencia sobre cuestiones relacionadas con el mantenimiento de hardware, redes y sistemas",
-        href: "/help"
-    },*/
+        href: "/Help"
+    },
     {
         name: "Gestión de REPSE VICTUM RE®",
         description: "Portal de gestión de proveedores integrado con ERP",
         href: "/Repse"
     },
-   /* {
+    /*{
         name: "VICTUM METRIX®",
         description: "Impulsa el crecimiento individual y colectivo",
         href: "/metrix"
     }*/
 ]
 
-const Navbar = ({ children }) => {
+/*const Navbar = ({ children }) => {
 
     const [estoyMovil, seteEstoyMovil] = useState(false)
 
-    return (
-        estoyMovil ? (
-            <Bar
-                temp={true}
-                seteEstoyMovil={seteEstoyMovil}
-            >
-                {children}
-            </Bar>
-        ) : (
-            <Fade direction="down">
-                <Bar
-                    temp={false}
-                    seteEstoyMovil={seteEstoyMovil}
-                >
-                    {children}
-                </Bar>
-            </Fade>
-        )
-    )
-}
+    return estoyMovil ? <Bar temp={estoyMovil} seteEstoyMovil={seteEstoyMovil}>{children}</Bar> : <Fade direction="down"><Bar temp={estoyMovil} seteEstoyMovil={seteEstoyMovil}>{children}</Bar></Fade>
+
+}*/
+
+const Navbar = ({ children }) => {
+    const [estoyMovil, setEstoyMovil] = useState(false);
+    const BarComponent = <Bar temp={estoyMovil} seteEstoyMovil={setEstoyMovil}>{children}</Bar>;
+    return estoyMovil ? BarComponent : <Fade direction="down">{BarComponent}</Fade>;
+};
+
 
 const Bar = ({ seteEstoyMovil, temp, children }) => {
 
@@ -102,7 +92,7 @@ const Bar = ({ seteEstoyMovil, temp, children }) => {
                                 <div className='submenu-part-1'>
                                     <h1 className='submenu-title'>Soluciones</h1>
                                     <h1 className='submenu-sub-title'>Explorar una amplia gama de soluciones personalizadas y bien adaptadas a tu necesidad</h1>
-                                    <ColorButton disableElevation onClick={handleClick} size='small' variant="contained" className='btn-standar' >Explorar más...</ColorButton>
+                                    <ColorButton disableElevation onClick={handleClick} size='small' variant="contained" className='btn-standar'>Explorar más...</ColorButton>
                                 </div>
                                 <div>
                                     <div className='submenu-part-2'>
@@ -114,7 +104,7 @@ const Bar = ({ seteEstoyMovil, temp, children }) => {
                                                         <Link href={item?.href}>
                                                             <div className='href-menu-item'>
                                                                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                                                                    <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg" style={{ /*backgroundColor: 'gray'*/ }}>
+                                                                    <div className="left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg" style={{ /*backgroundColor: 'gray'*/ }}>
                                                                         {Icon_ && <Icon_ fontSize={20} aria-hidden="true" />}
                                                                     </div>
                                                                 </dt>

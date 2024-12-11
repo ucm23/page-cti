@@ -18,13 +18,13 @@ const NotFound = () => {
               <Navbar />
 
               {/* Encabezado */}
-              <section className="hero_container container">
+              {/*<section className="hero_container container">
                   <Fade direction="right">
                       <h1 className="hero_title">
                           Esta página está vacía
                       </h1>
                   </Fade>
-              </section>
+              </section>*/}
           </header>
         </Layout>
     )
