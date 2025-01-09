@@ -25,7 +25,7 @@ const Nosotros = () => {
                 <section className='d-flex overhid'>
                     <section className='nosotros-texto'>
                         <Fade direction="right">
-                            <h1 className='nosotros-titulo'>Grupo CTI Tech-IN POS</h1>
+                            <h1 className='nosotros-titulo'>Grupo CTI</h1>
                             <p className='nosotros-text'>Somos un equipo multidisciplinario con más de 20 años de experiencia en servicios
                                 de consultoría especializada en: Sistemas de Tráfico- ITS-PEAJE-TELEPEAJE y Sistemas de Gestión para
                                 Autopistas de Cuota (SISTEMAS PROPIOS-Fabricantes y desarrollo propio), Seguridad Informática, Virtualización,

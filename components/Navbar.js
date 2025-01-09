@@ -68,7 +68,9 @@ const Bar = ({ seteEstoyMovil, temp, children }) => {
                             <p className={`nav_title ${showSubMenu1 && "bg-gray"}`}>Grupo CTI </p>
                         </a>
                     </Link>
-                    <p className={`title_desc ${showSubMenu1 && "bg-gray"}`}>Consultores en Sistemas de Tráfico e ITS</p>
+                    {/*<p className={`title_desc ${showSubMenu1 && "bg-gray"}`}>Consultores en Sistemas de Tráfico e ITS</p>*/}
+                    <p className={`title_desc ${showSubMenu1 && "bg-gray"}`}><strong>C</strong>readores de Sistemas de <strong>T</strong>ráfico e <strong>I</strong>TS.IA</p>
+                    
                     <ul className={navMobile ? 'nav_mobile nav__link--show' : 'nav_link nav_link_menu'} >
                         <img onClick={handleNav} src="/close.svg" className="nav_close" alt='Cerrar Navbar de Grupo CTI' />
                         <li className="nav_items">

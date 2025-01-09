@@ -165,7 +165,7 @@ const index = () => {
                 <Navbar >
                     <Fade direction="left">
                         <h1 className="hero_title">
-                            Grupo CTI Tech-IN POS
+                            Grupo CTI
                         </h1>
                     </Fade>
                     <Fade direction="right">
@@ -192,7 +192,7 @@ const index = () => {
                     <div className='bienvenida'>
                         <Fade direction="left">
                             <h1 className='bienvenida_titulo'>Bienvenidos</h1>
-                            <p className='bienvenida_texto'>Grupo CTI Tech-IN POS es una empresa que se creó en el año 2010 con el objetivo de vender Hardware, Software y Servicios de Tecnología, ofrecemos un servicio y atención personalizada acorde a las necesidades de nuestros clientes, con una oferta competitiva y de valor en conjunto con nuestros socios de negocios.</p>
+                            <p className='bienvenida_texto'>Grupo CTI es una empresa que se creó en el año 2010 con el objetivo de vender Hardware, Software y Servicios de Tecnología, ofrecemos un servicio y atención personalizada acorde a las necesidades de nuestros clientes, con una oferta competitiva y de valor en conjunto con nuestros socios de negocios.</p>
                         </Fade>
                     </div>
                     <div className='img_bienvenida' style={{ width: 460 }} >
@@ -286,7 +286,7 @@ const index = () => {
             <section>
                 <section className='containerWP-2 d-flex flex-column'>
                     <h1 className='clientes-titulo'>Nuestros Clientes</h1>
-                    <h3 className='clientes-subtitulo'>Ellos confian en la calidad de Grupo CTI Tech-IN POS</h3>
+                    <h3 className='clientes-subtitulo'>Ellos confian en la calidad de Grupo CTI</h3>
                     <div className="slider">
                         <div className="slide-track">
                             {

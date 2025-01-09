@@ -58,10 +58,10 @@ const Layout = ({ children }) => {
     return (
         <>
             <Head>
-                <meta name="title" content="Grupo CTI Tech-IN POS" />
+                <meta name="title" content="Grupo CTI" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta name="description" content="Grupo CTI Tech-IN POS es una empresa que se creo en el año 2001 con el objetivo de vender Hardware, Software y Servicios de Tecnología" />
+                <meta name="description" content="Grupo CTI es una empresa que se creo en el año 2001 con el objetivo de vender Hardware, Software y Servicios de Tecnología" />
                 <link rel="icon" type="image/x-icon" href="/ico.ico"></link>
                 <title>Grupo CTI</title>
             </Head>
