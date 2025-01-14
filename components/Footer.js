@@ -1,4 +1,4 @@
-import {FaFacebookSquare,FaPhoneSquareAlt } from 'react-icons/fa'
+import {FaFacebookSquare,FaPhoneSquareAlt,FaYoutube } from "react-icons/fa";
 import {GrInstagram} from 'react-icons/gr'
 import {HiMail} from 'react-icons/hi';
 import {MdLocationOn} from 'react-icons/md'
@@ -16,6 +16,10 @@ const Footer = () => {
                             <Link href='https://www.facebook.com/Grupo-CTI-Tech-IN-POS-107516228774153'>
                                 <a target='_blank'><FaFacebookSquare /></a>
                             </Link>
+                            <Link href='https://www.youtube.com/@GrupoCTI-t5m'>
+                                <a target='_blank'><FaYoutube /></a>
+                            </Link>
+                            
                             <Link href='https://www.instagram.com/ctitechinpos/'>
                                 <a target='_blank'><GrInstagram /></a>
                             </Link>
